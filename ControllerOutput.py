@@ -44,7 +44,7 @@ while not EXIT:
     e = '000'
     f = '0000'
     
-    for x in range(0,buttonNumber):
+    for x in range(buttonNumber):
         if controls.get_button(x) == 1:
             e = '0' + str(x+1)
             if x < 9:
