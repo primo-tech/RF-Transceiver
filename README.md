@@ -2,4 +2,5 @@
 
 Transmitter and Receiver Software for Arduino Based Radio Frequency (RF) Communication System.
 
-Based Of Work By Youtuber IFORCE2D.
+Based Of "Cheapass Transmitter and Reciever" By Youtuber IFORCE2D.
+https://www.youtube.com/user/iforce2d
