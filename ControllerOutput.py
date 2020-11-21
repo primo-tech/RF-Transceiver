@@ -5,15 +5,15 @@ import time
 import pygame
 import serial
 
-pygame.init()                                                 #initiaise pygame
-controls = pygame.joystick.Joystick(0)    # call the joystic controls
-clock = pygame.time.Clock()                     # intialise pygame refresh and call it clock
-controls.init()                                                # initialise the controls
+pygame.init()                               # initiaise pygame
+controls = pygame.joystick.Joystick(0)      # call the joystic controls
+clock = pygame.time.Clock()                 # intialise pygame refresh and call it clock
+controls.init()                             # initialise the controls
 
-#arduino =  serial.Serial('/dev/ttyUSB0', 9600,timeout = 1) #connect to the arduino's serial port
+#arduino =  serial.Serial('/dev/ttyUSB0', 9600,timeout = 1) # connect to the arduino's serial port
 #time.sleep(2)
 
-arduino =  serial.Serial('COM9', 9600,timeout = 1) #connect to the arduino's serial port
+arduino =  serial.Serial('COM9', 9600,timeout = 1)  # connect to the arduino's serial port
 time.sleep(2)
 
 EXIT = False
@@ -61,15 +61,15 @@ while not EXIT:
         elif hat[1] == -1:
             f = '0001'
             
-    control = ['<' + a,b,c,d,e,f + '>']      # save strings in a list
-    cstring = ",".join(control)                # convert list to a single string with commas seperating values
+    control = ['<' + a,b,c,d,e,f + '>']         # save strings in a list
+    cstring = ",".join(control)                 # convert list to a single string with commas seperating values
                 
     print(cstring)
     arduino.write(cstring)                      # print string to shell and write data to arduino with a 0.1ms delay
     time.sleep(0.0001)
     
     if  controls.get_button(12) == 1:
-        pygame.quit()                               # This is used to quit pygame and use any internal program within the python
+        pygame.quit()                           # This is used to quit pygame and use any internal program within the python
         quit()
 
     clock.tick(1000)
