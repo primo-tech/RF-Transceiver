@@ -10,10 +10,10 @@ controls = pygame.joystick.Joystick(0)      # call the joystic controls
 clock = pygame.time.Clock()                 # intialise pygame refresh and call it clock
 controls.init()                             # initialise the controls
 
-#arduino =  serial.Serial('/dev/ttyUSB0', 9600,timeout = 1) # connect to the arduino's serial port
+#arduino =  serial.Serial('/dev/ttyUSB0', 9600,timeout = 1) # connect to the arduino's serial port Linux
 #time.sleep(2)
 
-arduino =  serial.Serial('COM9', 9600,timeout = 1)  # connect to the arduino's serial port
+arduino =  serial.Serial('COM9', 9600,timeout = 1)  # connect to the arduino's serial port Windows
 time.sleep(2)
 
 EXIT = False
@@ -38,7 +38,7 @@ while not EXIT:
     buttonNumber = controls.get_numbuttons()
 
     a = valueMap(controls.get_axis(0))   
-    b = valueMap(controls.get_axis(1))  
+    b = valueMap(controls.get_axis(1))
     c = valueMap(controls.get_axis(2))
     d = valueMap(controls.get_axis(3))
     e = '000'
